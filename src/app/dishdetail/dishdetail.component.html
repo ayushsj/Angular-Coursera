@@ -55,7 +55,7 @@
             <mat-list-item *ngFor="let review of dish.comments">
               <p matLine>{{review.comment}}</p>
               <p matLine>{{review.rating}} Stars</p>
-              <p matLine>--{{review.author}}</p>
+              <p matLine>--{{review.author}} {{review.date | date:'MMM d, y' }}</p>
             </mat-list-item>
             <mat-list-item *ngIf="this.commentForm.valid">
               <p matLine>{{commentForm.value.comment}}</p>
